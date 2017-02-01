@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>tab5</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<style>
+	a:hover { text-decoration:none}
+	#wrap{width:700px; margin:50px auto 0; overflow:hidden; }
+	.tab-menu {  width:100px; float:left; border-bottom:1px solid #f0f0f0;}
+	.tab-menu li { height:35px; line-height:35px; border-top:1px solid #f0f0f0; border-right:1px solid #f0f0f0; border-left:1px solid #f0f0f0; box-sizing:border-box}
+	.tab-menu li:first-child { border-left:1px solid #f0f0f0;}
+	.tab-menu li.on { background-color:#eee;}
+	.tab-menu li a { display:block;font-size:14px; color:#333; text-align:center;}
+	.tab-menu li.on a{ font-weight:bold}
+	.mask { width:600px; height:375px; overflow:hidden;}
+	.cont { float:left; display:none}
+	.mask .cont:first-child { display: inline-block; }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul class="tab-menu">
+			<li class="on"><a href="#">사자</a></li>
+			<li><a href="#">호랑이</a></li>
+			<li><a href="#">코끼리</a></li>
+			<li><a href="#">곰</a></li>
+		</ul>	
+		<div class="mask">
+			<div class="cont"><img src="images/lion.jpg" alt="사자" width="600" height="375" /></div>
+			<div class="cont"><img src="images/tiger.jpg" alt="사자" width="600" height="375" /></div>
+			<div class="cont"><img src="images/elephant.jpg" alt="사자" width="600" height="375" /></div>
+			<div class="cont"><img src="images/bear.jpg" alt="사자" width="600" height="375" /></div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			var tabTrigger = $('.tab-menu li'); 
+			var tabCont = $('.cont'); 
+
+			tabTrigger.each(function(i){ // i는 index 
+				tabTrigger.eq(i).mouseover(function(){ //혹은 tabTrigger.eq(i) 부분을 $(this) 로 바뀌어도 된다. 
+					tabTrigger.removeClass('on');
+				 	$(this).addClass('on');
+					tabCont.hide();
+					tabCont.eq(i).show();
+	 			});
+	 		});
+ 	});
+	</script>
+</body>
+</html>

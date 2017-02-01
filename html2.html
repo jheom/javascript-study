@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>신한은행 RETS</title>
+ 
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/uiCommon.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.boardView03 thead tr th:first').css('border-left','2px solid #666');
+	$('.boardView03 tbody tr').eq(0).find('td').eq(0).css({'border-bottom':'2px solid #666','border-left':'2px solid #666'});
+	$('.boardView03 tbody tr').eq(0).find('td').eq(1).css('border-bottom','2px solid #666');
+	$('.boardView03 tbody tr').eq(1).find('td').eq(1).css({'border':'2px solid #666','background':'#666'});
+	$('.boardView03 tbody tr').eq(1).find('td:last').css('border-left','2px solid #666');
+	$('.boardView03 tbody tr').eq(2).find('td:last').css('border-left','2px solid #666');
+	$('.boardView03 tbody tr').eq(3).find('td:last').css('border-left','2px solid #666');
+	$('.boardView03 tbody tr').eq(4).find('td:last').css('border-left','2px solid #666');
+	$('.boardView03 tbody tr').eq(5).find('td:last').css('border-left','2px solid #666');
+	$('.boardView03 tbody tr:last').find('td').css('border-bottom','2px solid #666');
+	$('.boardView03 tbody tr:last').find('td:last').css({'border-top':'2px solid #666','border-right':'2px solid #666'});
+});
+</script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<img src="images/common/img_top.jpg" alt="" />
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- sidebar -->
+		<div id="sidebar">
+			<img src="images/common/img_left.jpg" alt="" />
+			<!-- relatedInfo -->
+			<div class="relatedInfo">
+				<h3><img src="images/common/title_relatedInfo.gif" alt="Related Information" /></h3>
+				<ul>
+					<li><a href="#"><img src="images/common/btn_research.gif" alt="리서치 보기" /></a></li>
+					<li><a href="#"><img src="images/common/btn_procolumn.gif" alt="전문가 컬럼" /></a></li>
+				</ul>
+			</div>
+			<!-- //relatedInfo -->
+		</div>
+		<!-- //sidebar -->
+		<!-- content -->
+		<div id="content">
+			<div class="contentHead">
+				<h3 class="title_h3"><img src="images/common/title_column.gif" alt="전문가칼럼" /></h3>
+				<p class="pathIndicator">
+					<a href="#none">Home</a>
+					<span>&gt;</span>
+					<a href="#none">사업영역</a>
+					<span>&gt;</span>
+					<strong>사업영역소개</strong>
+				</p>
+			</div>
+
+			<p class="columnText"><img src="images/common/text_column.gif" alt="신한은행 부동산전략사업팀이 관리하는 빌딩 현황입니다." /></p>
+
+			<table class="boardView03">
+				<caption class="none">전문가칼럼</caption>
+				<colgroup>
+					<col class="col01" />
+					<col class="col02" />
+					<col class="col03" />
+				<colgroup>
+				<thead>
+					<tr>
+						<th class="no"><img src="images/bbs/text_no.gif" alt="번호" /></th>
+						<th class="title"><img src="images/bbs/text_title.gif" alt="제목" /></th>
+						<th class="file"><img src="images/bbs/text_file.gif" alt="첨부파일" /></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="no">43</td>
+						<td class="title">
+							<p class="image"><img src="images/common/@img_column01.gif" alt="" /></p>
+							<p class="text">
+								<span class="job">서울파이낸스센터 PB팀장</span><span class="name">| 이은미</span><br />
+								<span class="area">자산분배전략</span>
+							</p>
+						</td>
+						<td class="file"><a href="#none"><img src="images/bbs/icon_pdf.gif" alt="" /></a></td>
+					</tr>
+					<tr>
+						<td class="no">42</td>
+						<td class="title">
+							<p class="image"><img src="images/common/@img_column02.gif" alt="" /></p>
+							<p class="text">
+								<span class="job">여의도센터 PB팀장</span><span class="name">| 김상희</span><br />
+								<span class="area">다시 부각되고 있는 미국을 주목하자!</span>
+							</p>
+						</td>
+						<td class="file"><a href="#none"><img src="images/bbs/icon_ppt.gif" alt="" /></a></td>
+					</tr>
+					<tr>
+						<td class="no">41</td>
+						<td class="title">
+							<p class="image"><img src="images/common/@img_column03.gif" alt="" /></p>
+							<p class="text">
+								<span class="job">스타타워센터 PB팀장</span><span class="name">| 유상훈</span><br />
+								<span class="area">최적의 목표수익률 관리를 통한 포트폴리오 리밸런싱 성과 제고 방안</span>
+							</p>
+						</td>
+						<td class="file"><a href="#none"><img src="images/bbs/icon_doc.gif" alt="" /></a></td>
+					</tr>
+					<tr>
+						<td class="no">40</td>
+						<td class="title">
+							<p class="image"><img src="images/common/@img_column04.gif" alt="" /></p>
+							<p class="text">
+								<span class="job">압구정센터 PB팀장</span><span class="name">| 조성만</span><br />
+								<span class="area">주간 2000 시대! 합리적 투자를 위해서는</span>
+							</p>
+						</td>
+						<td class="file"><a href="#none"><img src="images/bbs/icon_pdf.gif" alt="" /></a></td>
+					</tr>
+					<tr>
+						<td class="no">39</td>
+						<td class="title">
+							<p class="image"><img src="images/common/@img_column05.gif" alt="" /></p>
+							<p class="text">
+								<span class="job">서교센터 PB팀장</span><span class="name">| 조갑원</span><br />
+								<span class="area">2011년 재테크 전략</span>
+							</p>
+						</td>
+						<td class="file"><a href="#none"><img src="images/bbs/icon_pdf.gif" alt="" /></a></td>
+					</tr>
+					<tr>
+						<td class="no">38</td>
+						<td class="title">
+							<p class="image"><img src="images/common/@img_column01.gif" alt="" /></p>
+							<p class="text">
+								<span class="job">서울파이낸스센터 PB팀장</span><span class="name">| 이은미</span><br />
+								<span class="area">자금시장통합법 꼼꼼히 들여다보기</span>
+							</p>
+						</td>
+						<td class="file"><a href="#none"><img src="images/bbs/icon_pdf.gif" alt="" /></a></td>
+					</tr>
+					<tr>
+						<td class="no">37</td>
+						<td class="title">
+							<p class="image"><img src="images/common/@img_column01.gif" alt="" /></p>
+							<p class="text">
+								<span class="job">압구정센터 PB팀장</span><span class="name">| 조성만</span><br />
+								<span class="area">주가 2000 시대! 합리적 투자를 위해서는</span>
+							</p>
+						</td>
+						<td class="file"><a href="#none"><img src="images/bbs/icon_pdf.gif" alt="" /></a></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- paging -->
+			<div class="paging">
+				<span class="prev"><a href="#none"><img src="images/bbs/btn_board_prev.gif" alt="이전글" /></a></span>
+					<span class="current">1</span>
+					<span><a href="#none">2</a></span>
+					<span class="next"><a href="#none"><img src="images/bbs/btn_board_next.gif" alt="이전글" /></a></span>
+			</div>
+			<!-- //paging -->
+			<!-- searchField -->
+			<fieldset class="searchField">
+				<legend class="none">게시판검색</legend>
+				<label for="searchOption" class="none">검색옵션</label>
+				<select id="searchOption">
+					<option>전체</option>
+				</select>
+				<label for="searchInput" class="none">검색</label>
+				<input type="text" class="input_text" id="searchInput" style="width:150px" />
+				<label for="searchSubmit" class="none">입력</label>
+				<input type="image" id="searchSubmit" src="images/bbs/btn_search.gif" alt="SEARCH" />
+			</fieldset>
+			<!-- //searchField -->
+
+
+		</div>
+		<!-- //content -->
+		<div class="bottom_bg"></div>
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="innerWrap">
+			<div class="logoWrap">
+				<span class="logo"><img src="images/common/logo_footer.gif" alt="신한은행" /></span>
+				<span class="callCenter"><img src="images/common/footer_callcenter.gif" alt="콜센터 1599-8000" /></span>
+			</div>
+			<ul class="link">
+				<li class="first"><a href="#none"><img src="images/common/footer_link01.gif" alt="개인정보취급방침" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link02.gif" alt="윤리강령" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link03.gif" alt="영업점 안내" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link04.gif" alt="사이트맵" /></a></li>
+			</ul>
+			<p class="copyright">
+				<img src="images/common/footer_copyright.gif" alt="COPYRIGHT 2008 BY SHINHAN BANK ALL RIGHTS RESERVED" />
+			</p>
+			<div class="selectLink">
+				<img src="images/common/footer_select.gif" alt="" />
+			</div>
+		</div>
+		<div class="footer_bottom"></div>
+	</div>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+</body>
+</html>
+
+

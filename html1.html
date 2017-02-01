@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>신한은행 RETS</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/uiCommon.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.listStyle01 li a').css('color','blue');
+	$('.listStyle01 li:first a').css('color','red');
+
+	$('.boardList01 tr:odd td.no').css('font-weight','bold')
+	$('.boardList01 tr:odd td.title a').css('color','red');
+	$('.boardList01 tr:even td.writer').css('color','blue');
+	$('.boardList01 tr:even td.date').css('text-decoration','underline');
+});
+</script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<img src="images/common/img_top.jpg" alt="" />
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- sidebar -->
+		<div id="sidebar">
+			<img src="images/common/img_left.jpg" alt="" />
+			<!-- relatedInfo -->
+			<div class="relatedInfo">
+				<h3><img src="images/common/title_relatedInfo.gif" alt="Related Information" /></h3>
+				<ul>
+					<li><a href="#"><img src="images/common/btn_research.gif" alt="리서치 보기" /></a></li>
+					<li><a href="#"><img src="images/common/btn_procolumn.gif" alt="전문가 컬럼" /></a></li>
+				</ul>
+			</div>
+			<!-- //relatedInfo -->
+		</div>
+		<!-- //sidebar -->
+		<!-- content -->
+		<div id="content">
+			<div class="contentHead">
+				<h3 class="title_h3"><img src="images/common/title01_daily.gif" alt="Daily 부동산 주요뉴스" /></h3>
+				<!--
+				    * 이미지 경로
+					Daily부동산 주요뉴스 : images/common/title01_daily.gif
+					오피스 시장정보 : images/common/title01_office.gif
+					부동산 Q&A :  images/common/title01_qna.gif
+					전문가 칼럼 : images/common/title01_column.gif
+					리서치 : images/common/title01_research.gif
+					Review & Perspect : images/common/title01_review.gif
+					 -->
+				<p class="pathIndicator">
+					<a href="#none">Home</a>
+					<span>&gt;</span>
+					<a href="#none">사업영역소개</a>
+					<span>&gt;</span>
+					<strong>Daily 부동산 주요뉴스</strong>
+				</p>
+			</div>
+			<div class="innerWrap bgImage01">
+				<p class="textImage">
+					<img src="images/common/text01_daily.gif" alt="언론에 소개된 부동산 전략사업팀의 유용한 소식과 뉴스를 빠르게 전달합니다." />
+				</p>
+				<!--
+				    * 이미지 경로
+					Daily부동산 주요뉴스 : images/common/text01_daily.gif
+					오피스 시장정보 : images/common/text01_office.gif
+					부동산 Q&A :  images/common/text01_qna.gif
+					전문가 칼럼 : images/common/text01_column.gif
+					리서치 : images/common/text01_research.gif
+					Review & Perspect : images/common/text01_review.gif
+					 -->
+				<h4 class="title_h4"><img src="images/common/title0101.gif" alt="HOT뉴스" /></h4>
+				<!--
+				    * 이미지 경로
+					Daily부동산 주요뉴스 : images/common/title0101.gif
+					오피스 시장정보 : images/common/title0102.gif
+					부동산 Q&A :  images/common/title0102.gif
+					전문가 칼럼 :  images/common/title0102.gif
+					리서치 :  images/common/title0102.gif
+					Review & Perspect :  images/common/title0102.gif
+					 -->
+				<ul class="listStyle01 mb35">
+					<li class="first">
+						<p class="image"><img src="images/common/@sample01.gif" alt="" /></p>
+						<p class="description">
+							<a href="#none">2010년 5월 16일 개장한 드림실현 프로젝트 3호점 콩사랑. 경기도 군포시 산본시장에 위치한 이 점포의 주인은 북한이탈주민 박소연씨다. 지난 2004년 7월 베트남을 걸쳐...</a>
+						</p>
+						<p class="date">2010.11.01</p>
+					</li>
+					<li>
+						<p class="image"><img src="images/common/@sample01.gif" alt="" /></p>
+						<p class="description">
+							<a href="#none">특히 이번 대회에는 일본을 대표하는 명문클럽인 요코하마 마리노스 유소년팀과 홍명보 축구교실, 유상철 축구교실 등 국내외 대표적인 유소년 축구클럽이 참가해 미래의 축구...</a>
+						</p>
+						<p class="date">2010.11.01</p>
+					</li>
+				</ul>
+
+				<table class="boardList01">
+					<caption class="none">게시판</caption>
+					<colgroup>
+						<col width="12%" />
+						<col width="65%" />
+						<col width="10%" />
+						<col />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>제목</th>
+							<th>작성자</th>
+							<th>작성일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="first">
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+						<tr>
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+						<tr>
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+						<tr>
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+						<tr>
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+						<tr>
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+						<tr>
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+						<tr>
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+						<tr>
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+						<tr>
+							<td class="no">1234</td>
+							<td class="title"><a href="#none">아파트 시세 및 거래현황을 한눈에 볼 수 있습니다.</a></td>
+							<td class="writer">강민호</td>
+							<td class="date">2011.06.27</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- paging -->
+				<div class="paging">
+					<span class="prev"><a href="#none"><img src="images/bbs/btn_board_prev.gif" alt="이전글" /></a></span>
+					<span class="current">1</span>
+					<span><a href="#none">2</a></span>
+					<span class="next"><a href="#none"><img src="images/bbs/btn_board_next.gif" alt="이전글" /></a></span>
+				</div>
+				<!-- //paging -->
+				<!-- searchField -->
+				<fieldset class="searchField">
+					<legend class="none">게시판검색</legend>
+					<label for="searchOption" class="none">검색옵션</label>
+					<select id="searchOption">
+						<option>전체</option>
+					</select>
+					<label for="searchInput" class="none">검색</label>
+					<input type="text" class="input_text" id="searchInput" style="width:150px" />
+					<label for="searchSubmit" class="none">입력</label>
+					<input type="image" id="searchSubmit" src="images/bbs/btn_search.gif" alt="SEARCH" />
+				</fieldset>
+				<!-- //searchField -->
+			</div>
+		</div>
+		<!-- //content -->
+		<div class="bottom_bg"></div>
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="innerWrap">
+			<div class="logoWrap">
+				<span class="logo"><img src="images/common/logo_footer.gif" alt="신한은행" /></span>
+				<span class="callCenter"><img src="images/common/footer_callcenter.gif" alt="콜센터 1599-8000" /></span>
+			</div>
+			<ul class="link">
+				<li class="first"><a href="#none"><img src="images/common/footer_link01.gif" alt="개인정보취급방침" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link02.gif" alt="윤리강령" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link03.gif" alt="영업점 안내" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link04.gif" alt="사이트맵" /></a></li>
+			</ul>
+			<p class="copyright">
+				<img src="images/common/footer_copyright.gif" alt="COPYRIGHT 2008 BY SHINHAN BANK ALL RIGHTS RESERVED" />
+			</p>
+			<div class="selectLink">
+				<img src="images/common/footer_select.gif" alt="" />
+			</div>
+		</div>
+		<div class="footer_bottom"></div>
+	</div>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+</body>
+</html>
+
+

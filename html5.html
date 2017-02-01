@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>신한은행 RETS</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/uiCommon.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<img src="images/common/img_top.jpg" alt="" />
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- sidebar -->
+		<div id="sidebar">
+			<img src="images/common/img_left.jpg" alt="" />
+			<!-- relatedInfo -->
+			<div class="relatedInfo">
+				<h3><img src="images/common/title_relatedInfo.gif" alt="Related Information" /></h3>
+				<ul>
+					<li><a href="#"><img src="images/common/btn_research.gif" alt="리서치 보기" /></a></li>
+					<li><a href="#"><img src="images/common/btn_procolumn.gif" alt="전문가 컬럼" /></a></li>
+				</ul>
+			</div>
+			<!-- //relatedInfo -->
+		</div>
+		<!-- //sidebar -->
+		<!-- content -->
+		<div id="content">
+			<div class="contentHead">
+				<h3 class="title_h3"><img src="images/realestate_info/title_imdae_register.gif" alt="임대차(임대) 접수등록" /></h3>
+				<p class="pathIndicator">
+					<a href="#none">Home</a>
+					<span>&gt;</span>
+					<a href="#none">사업영역</a>
+					<span>&gt;</span>
+					<strong>사업영역소개</strong>
+				</p>
+			</div>
+			<p style="padding:5px 0 50px 55px"><img src="images/realestate_info/text_imdae_list.gif" alt="신한은행의 임대전문가에게 고객님의 소중한 건물의 임대를 맡기세요." /></p>
+
+			<h4 class="title_h4 style3">고객정보</h4>
+			<div style="text-align:right; margin-top:-27px; padding:0 40px 4px 0;">
+				<a href="#none"><img src="images/realestate_info/btn_save.gif" alt="저장" /></a>
+			</div>
+			<table class="boardWrite02">
+				<caption class="none"></caption>
+				<colgroup>
+					<col style="width:15%" />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="firstRow">
+						<th class="col1 firstCell">신청 고객명<span class="required">*</span></th>
+						<td class="col2">
+							<input type="text" class="input_text" style="width:111px" />
+						</td>
+						<th class="col3">주민번호</th>
+						<td class="col4">
+							<input type="text" class="input_text" style="width:62px" />
+							-
+							<input type="text" class="input_text" style="width:62px" />
+						</td>
+						<th class="col5">휴대폰<span class="required">*</span></th>
+						<td class="col6 lastCell">
+							<input type="text" class="input_text" style="width:30px" />
+							-
+							<input type="text" class="input_text" style="width:30px" />
+							-
+							<input type="text" class="input_text" style="width:30px" />
+						</td>
+					</tr>
+					<tr>
+						<th class="col1 firstCell">신청인 구분<span class="required">*</span></th>
+						<td class="col2">
+							<span><input type="radio" /> 본인</span>
+							<span><input type="radio" /> 대리인<span>
+						</td>
+						<th class="col3">임대인 구분<span class="required">*</span></th>
+						<td class="col4">
+							<span><input type="radio" /> 개인</span>
+							<span><input type="radio" /> 법인<span>
+						</td>
+						<th class="col5">연락처</th>
+						<td class="col6 lastCell">
+							<input type="text" class="input_text" style="width:30px" />
+							-
+							<input type="text" class="input_text" style="width:30px" />
+							-
+							<input type="text" class="input_text" style="width:30px" />
+						</td>
+					</tr>
+					<tr class="lastRow">
+						<th class="col1 firstCell">사업자명<span class="required">*</span></th>
+						<td class="col2">
+							<input type="text" class="input_text" style="width:111px" />
+						</td>
+						<th class="col3">사업자 번호</th>
+						<td class="col4">
+							<input type="text" class="input_text" style="width:62px" />
+							-
+							<input type="text" class="input_text" style="width:62px" />
+						</td>
+						<th class="col5">e-mail<span class="required">*</span></th>
+						<td class="col6 lastCell">
+							<input type="text" class="input_text" style="width:129px" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="requiredText">(<span>*</span>)는 필수입력사항 입니다.</p>
+
+			<h4 class="title_h4 style3 second">건물정보</h4>
+			<table class="boardWrite02">
+				<caption class="none"></caption>
+				<colgroup>
+					<col style="width:15%" />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="firstRow">
+						<th class="col1 firstCell">소재지<span class="required">*</span></th>
+						<td class="col2 lastCell" colspan="3">
+							<span><a href="#none"><img src="images/realestate_info/btn_zipcode.gif" alt="우편번호 찾기" /></a></span>
+							<input type="text" class="input_text" style="width:52px;" />
+							-
+							<input type="text" class="input_text" style="width:52px; margin-right:5px;" />
+							<input type="text" class="input_text" style="width:380px;" />
+						</td>
+					</tr>
+					<tr>
+						<th class="col1 firstCell">상세주소<span class="required">*</span></th>
+						<td class="col2 lastCell" colspan="3">
+							<input type="text" class="input_text" style="width:605px;" />
+						</td>
+					</tr>
+					<tr>
+						<th class="col1 firstCell">주차대수<span class="required">*</span></th>
+						<td class="col2">
+							<input type="text" class="input_text" style="width:110px;" /> 대
+						</td>
+						<th class="col1">빌딩명</th>
+						<td class="col2 lastCell">
+							<input type="text" class="input_text" style="width:360px;" />
+						</td>
+					</tr>
+					<tr>
+						<th class="col1 firstCell">주차대수<span class="required">*</span></th>
+						<td class="col2">
+							<span><input type="radio" /> 중앙</span>
+							<span><input type="radio" /> 개별<span>
+						</td>
+						<th class="col1">규모<span class="required">*</span></th>
+						<td class="col2 lastCell">
+							지하 <input type="text" class="input_text" style="width:52px" /> 층 / 지상 <input type="text" class="input_text" style="width:52px" /> 층
+						</td>
+					</tr>
+					<tr class="lastRow">
+						<th class="col1 firstCell">엘리베이터<span class="required">*</span></th>
+						<td class="col2">
+							<span><input type="radio" /> 유</span>
+							<span><input type="radio" /> 무<span>
+						</td>
+						<th class="col1"></th>
+						<td class="col2 lastCell"></td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="requiredText">(<span>*</span>)는 필수입력사항 입니다.</p>
+
+			<h4 class="title_h4 style3 second">임대정보</h4>
+			<table class="boardWrite02">
+				<caption class="none"></caption>
+				<colgroup>
+					<col style="width:15%" />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="firstRow">
+						<th class="col1 firstCell">현재업종</th>
+						<td class="col2">
+							<select class="colorOrange">
+								<option>현재업종선택</option>
+							</select>
+						</td>
+						<th class="col3">희망업종</th>
+						<td class="col4">
+							<select class="colorOrange">
+								<option>현재업종선택</option>
+							</select>
+						</td>
+						<th class="col5">주차가능대수</th>
+						<td class="col6 lastCell">
+							<input type="text" class="input_text" style="width:105px" /> 대
+						</td>
+					</tr>
+					<tr>
+						<th class="col1 firstCell">임대면적</th>
+						<td class="col2">
+							<span><input type="text" class="input_text" style="width:45px" /> 평</span>
+							<span><input type="text" class="input_text" style="width:45px" /> ㎥</span>
+						</td>
+						<th class="col3">해당층<span class="required">*</span></th>
+						<td class="col4 lastCell" colspan="3">
+							<span><input type="radio" /> 지하1층</span>
+							<span><input type="radio" /> 1층</span>
+							<span><input type="radio" /> 2층</span>
+							<span><input type="radio" /> 기타 <input type="text" class="input_text" style="width:135px" /></span>
+						</td>
+					</tr>
+					<tr>
+						<th class="col1 firstCell">임대면적</th>
+						<td class="col2">
+							<span><input type="text" class="input_text" style="width:45px" /> 평</span>
+							<span><input type="text" class="input_text" style="width:45px" /> ㎥</span>
+						</td>
+						<th class="col3">보증금합계<span class="required">*</span></th>
+						<td class="col4">
+							<input type="text" class="input_text" style="width:90px" /> 천원
+						</td>
+						<th class="col5">월임대료</th>
+						<td class="col6 lastCell">
+							<input type="text" class="input_text" style="width:90px" /> 천원
+						</td>
+					</tr>
+					<tr>
+						<th class="col1 firstCell">전용율</th>
+						<td class="col2">
+							<input type="text" class="input_text" style="width:119px" /> %
+						</td>
+						<th class="col3">월관리비<span class="required">*</span></th>
+						<td class="col4">
+							<input type="text" class="input_text" style="width:50px" /> 천원/3.3㎡
+						</td>
+						<th class="col5">전세환산가</th>
+						<td class="col6 lastCell">
+							<input type="text" class="input_text" style="width:50px" /> 천원/3.3㎡
+						</td>
+					</tr>
+					<tr>
+						<th class="col1 firstCell">임대희망일<span class="required">*</span></th>
+						<td class="col2 lastCell" colspan="5">
+							<input type="text" class="input_text" style="width:50px" /> <a href="#none"><img src="images/realestate_info/btn_calendar.gif" alt="" /></a>
+						</td>
+					</tr>
+					<tr>
+						<th class="col1 firstCell">영업점의견<span class="required">*</span></th>
+						<td class="col2 lastCell" colspan="5">
+							<p class="otherOpinion">※ 기타 요구사항 기재</p>
+							<textarea cols="" rows="" style="width:98%; height:64px;"></textarea>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="requiredText mb20">(<span>*</span>)는 필수입력사항 입니다.</p>
+
+		</div>
+		<!-- //content -->
+		<div class="bottom_bg"></div>
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="innerWrap">
+			<div class="logoWrap">
+				<span class="logo"><img src="images/common/logo_footer.gif" alt="신한은행" /></span>
+				<span class="callCenter"><img src="images/common/footer_callcenter.gif" alt="콜센터 1599-8000" /></span>
+			</div>
+			<ul class="link">
+				<li class="first"><a href="#none"><img src="images/common/footer_link01.gif" alt="개인정보취급방침" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link02.gif" alt="윤리강령" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link03.gif" alt="영업점 안내" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link04.gif" alt="사이트맵" /></a></li>
+			</ul>
+			<p class="copyright">
+				<img src="images/common/footer_copyright.gif" alt="COPYRIGHT 2008 BY SHINHAN BANK ALL RIGHTS RESERVED" />
+			</p>
+			<div class="selectLink">
+				<img src="images/common/footer_select.gif" alt="" />
+			</div>
+		</div>
+		<div class="footer_bottom"></div>
+	</div>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+</body>
+</html>
+
+

@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>신한은행 RETS</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/uiCommon.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.boardView02').children().children().children().eq(0).css('background-color','red').parent().next().next().children().eq(0).css('font-size','28px').parent().next().next().children().eq(1).children().css('height','200px').parent().parent().next().next().next().next().children().eq(2).css({'color':'blue','font-size':'30px'}).next().parent().next().next().children().eq(3).children().css({'background-color':'yellow','border-color':'red'});
+});
+</script>
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<img src="images/common/img_top.jpg" alt="" />
+	</div>
+	<!-- //header -->
+	<!-- container -->
+	<div id="container">
+		<!-- sidebar -->
+		<div id="sidebar">
+			<img src="images/common/img_left.jpg" alt="" />
+			<!-- relatedInfo -->
+			<div class="relatedInfo">
+				<h3><img src="images/common/title_relatedInfo.gif" alt="Related Information" /></h3>
+				<ul>
+					<li><a href="#"><img src="images/common/btn_research.gif" alt="리서치 보기" /></a></li>
+					<li><a href="#"><img src="images/common/btn_procolumn.gif" alt="전문가 컬럼" /></a></li>
+				</ul>
+			</div>
+			<!-- //relatedInfo -->
+		</div>
+		<!-- //sidebar -->
+		<!-- content -->
+		<div id="content">
+			<div class="contentHead">
+				<h3 class="title_h3"><img src="images/common/title_buildinginfo.gif" alt="빌딩 정보" /></h3>
+				<p class="pathIndicator">
+					<a href="#none">Home</a>
+					<span>&gt;</span>
+					<a href="#none">사업영역</a>
+					<span>&gt;</span>
+					<strong>사업영역소개</strong>
+				</p>
+			</div>
+
+			<p style="padding:0 0 45px 50px"><img src="images/common/text_buildinginfo01.gif" alt="고객님께서 보유하신 빌딩정보를 조회하는 곳입니다." /></p>
+
+			<table class="boardView02">
+				<caption></caption>
+				<colgroup>
+					<col class="col1" />
+					<col class="col2" />
+					<col class="col3" />
+					<col class="col4" />
+				</colgroup>
+				<tbody>
+					<tr class="firstRow">
+						<th>건물코드</th>
+						<td>
+							<input type="text" class="input_text" style="width:129px" value="BD00003000" />
+						</td>
+						<td colspan="2" rowspan="5">
+							<img src="images/common/@img_buildinginfo01.jpg" alt="" />
+						</td>
+					</tr>
+					<tr>
+						<th class="color01">접수번호</th>
+						<td>
+							<input type="text" class="input_text" style="width:129px" value="A-080716-186" />
+						</td>
+					</tr>
+					<tr>
+						<th class="color01">건물명</th>
+						<td>
+							<input type="text" class="input_text" style="width:129px" />
+						</td>
+					</tr>
+					<tr>
+						<th class="color01">용도</th>
+						<td>
+							<select>
+								<option>복합상가</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th class="color01">우편번호</th>
+						<td>
+							<input type="text" class="input_text" style="width:65px" />
+							<a href="#none"><img src="images/bbs/btn_zipcode01.gif" alt="우편번호검색" /></a>
+						</td>
+					</tr>
+					<tr>
+						<th class="color01">주소</th>
+						<td colspan="3">
+							<span>
+								<select>
+									<option>서울</option>
+								</select>
+							</span>
+							<span>
+								<select>
+									<option>동작구</option>
+								</select>
+							</span>
+							<span>
+								<select>
+									<option>사당동</option>
+								</select>
+							</span>
+							<span><input type="text" class="input_text" style="width:289px" /></span>
+						</td>
+					</tr>
+					<tr>
+						<th>착공일자</th>
+						<td>
+							<input type="text" class="input_text" style="width:88px" />
+							<a href="#none"><img src="images/bbs/btn_calendar.gif" alt="" /></a>
+						</td>
+						<th>우편번호</th>
+						<td>
+							<input type="text" class="input_text" style="width:88px" />
+							<a href="#none"><img src="images/bbs/btn_calendar.gif" alt="" /></a>
+						</td>
+					</tr>
+					<tr>
+						<th class="color01">구조</th>
+						<td colspan="3">
+							<select>
+								<option>철근콘크리트 구조</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>건축면적</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="622.32" />㎡
+						</td>
+						<th>대지면적</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="1,133,26" />㎡
+						</td>
+					</tr>
+					<tr>
+						<th>연면적</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="622.32" />㎡
+						</td>
+						<th>용적율</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="1,133,26" />㎡
+						</td>
+					</tr>
+					<tr>
+						<th>임대면적</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="622.32" />㎡
+						</td>
+						<th>전용율</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="1,133,26" />㎡
+						</td>
+					</tr>
+					<tr>
+						<th>지상층수</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="622.32" />층
+						</td>
+						<th>지하층수</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="1,133,26" />층
+						</td>
+					</tr>
+					<tr class="lastRow">
+						<th>옥탑층수</th>
+						<td colspan="3">
+							<input type="text" class="input_text alignRight" style="width:129px" value="622.32" />층
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="boardView02">
+				<caption></caption>
+				<colgroup>
+					<col class="col1" />
+					<col class="col2" />
+					<col class="col3" />
+					<col class="col4" />
+				</colgroup>
+				<tbody>
+					<tr class="firstRow">
+						<th>관리자(정)</th>
+						<td>
+							<select>
+								<option>유민준</option>
+							</select>
+						</td>
+						<th>관리자(부)</th>
+						<td>
+							<select>
+								<option>김능수</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>공지시가</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="5,820,000" />원
+						</td>
+						<th>실거래금액</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="11,400,796,000" />원
+						</td>
+					</tr>
+					<tr>
+						<th>보증금총액</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="3,600,000,000" />원
+						</td>
+						<th>담보설정액</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="5,250,000,000" />원
+						</td>
+					</tr>
+					<tr class="lastRow">
+						<th>월임대료총액</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="70,800,000" />원
+						</td>
+						<th>월관리비총액</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="11,520,000" />원
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="boardView02">
+				<caption></caption>
+				<colgroup>
+					<col class="col1" />
+					<col class="col2" />
+					<col class="col3" />
+					<col class="col4" />
+				</colgroup>
+				<tbody>
+					<tr class="firstRow">
+						<th>옥외주차대수</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="0" />대
+						</td>
+						<th>옥내주차대수</th>
+						<td>
+							<input type="text" class="input_text alignRight" style="width:129px" value="29" />대
+						</td>
+					</tr>
+					<tr class="lastRow">
+						<th>대당무료주차면적</th>
+						<td colspan="3">
+							<input type="text" class="input_text alignRight" style="width:129px" value="0" />㎡
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="boardView02">
+				<caption></caption>
+				<colgroup>
+					<col class="col1" />
+					<col class="col2" />
+					<col class="col3" />
+					<col class="col4" />
+				</colgroup>
+				<tbody>
+					<tr class="firstRow">
+						<th class="color01">대표자명</th>
+						<td>
+							<input type="text" class="input_text" style="width:129px" value="방명혜" />
+						</td>
+						<th>과세유형</th>
+						<td>
+							<select>
+								<option>세금계산서</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th class="color01">상호(법인명)</th>
+						<td colspan="3">
+							<input type="text" class="input_text" style="width:147px" value="지안플라자" />
+						</td>
+					</tr>
+
+					<tr>
+						<th>사업자구분</th>
+						<td colspan="3">
+							<span><input type="radio" />사업자</span>
+							<span><input type="radio" />개인</span>
+						</td>
+					</tr>
+
+					<tr>
+						<th class="color01">사업자등록번호</th>
+						<td colspan="3">
+							<p>
+								<input type="text" class="input_text" style="width:29px" /> - <input type="text" class="input_text" style="width:18px" /> - <input type="text" class="input_text" style="width:48px" /> <a href="#none"><img src="images/bbs/btn_check01.gif" alt="유효성체크" /></a>
+							</p>
+							<p class="color01">* 사업자등록번호 수정시 유효성 체크를 반드시 하시기 바랍니다.</p>
+							<p class="color01">* <strong>'위탁계약 고객인 경우'</strong> 통합 단말 수수료 통장의 사업자번화와 일치하는지 확인하시기 바랍니다.</p>
+						</td>
+					</tr>
+
+					<tr>
+						<th>종목</th>
+						<td>
+							<input type="text" class="input_text" style="width:137px" value="임대" />
+						</td>
+						<th>업태</th>
+						<td>
+							<input type="text" class="input_text" style="width:132px" value="부동산" />
+						</td>
+					</tr>
+
+					<tr>
+						<th>우편번호</th>
+						<td colspan="3">
+							<input type="text" class="input_text" style="width:65px" value="156-090" />
+							<a href="#none"><img src="images/bbs/btn_zipcode01.gif" alt="우편번호검색" /></a>
+						</td>
+					</tr>
+
+					<tr>
+						<th>사업장주소</th>
+						<td colspan="3">
+							<input type="text" class="input_text" style="width:574px" value="서울 동작구 사당동 139-30 6층" />
+						</td>
+					</tr>
+					<tr>
+						<th>담당자</th>
+						<td>
+							<input type="text" class="input_text" style="width:129px" value="김민희" />
+						</td>
+						<th>핸드폰</th>
+						<td>
+							<select>
+								<option>016</option>
+							</select>
+							- <input type="text" class="input_text" style="width:30px" value="231" /> - <input type="text" class="input_text" style="width:30px" value="3723" />
+						</td>
+					</tr>
+					<tr>
+						<th>전화번호</th>
+						<td>
+							<select>
+								<option>서울[02]</option>
+							</select>
+							- <input type="text" class="input_text" style="width:30px" value="591" /> - <input type="text" class="input_text" style="width:30px" value="0110" />
+						</td>
+						<th>FAX번호</th>
+						<td>
+							<select>
+								<option>서울[02]</option>
+							</select>
+							- <input type="text" class="input_text" style="width:30px" value="591" /> - <input type="text" class="input_text" style="width:30px" value="0112" />
+						</td>
+					</tr>
+					<tr>
+						<th>E-Mail</th>
+						<td colspan="3">
+							<input type="text" class="input_text" style="width:574px" value="minhikim@yahoo.com" />
+						</td>
+					</tr>
+					<tr class="lastRow">
+						<th>파일첨부#1</th>
+						<td colspan="3">
+							<input type="file" size="30" /><br />
+							<input type="file" size="30" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+		</div>
+		<!-- //content -->
+		<div class="bottom_bg"></div>
+	</div>
+	<!-- //container -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="innerWrap">
+			<div class="logoWrap">
+				<span class="logo"><img src="images/common/logo_footer.gif" alt="신한은행" /></span>
+				<span class="callCenter"><img src="images/common/footer_callcenter.gif" alt="콜센터 1599-8000" /></span>
+			</div>
+			<ul class="link">
+				<li class="first"><a href="#none"><img src="images/common/footer_link01.gif" alt="개인정보취급방침" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link02.gif" alt="윤리강령" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link03.gif" alt="영업점 안내" /></a></li>
+				<li><a href="#none"><img src="images/common/footer_link04.gif" alt="사이트맵" /></a></li>
+			</ul>
+			<p class="copyright">
+				<img src="images/common/footer_copyright.gif" alt="COPYRIGHT 2008 BY SHINHAN BANK ALL RIGHTS RESERVED" />
+			</p>
+			<div class="selectLink">
+				<img src="images/common/footer_select.gif" alt="" />
+			</div>
+		</div>
+		<div class="footer_bottom"></div>
+	</div>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+</body>
+</html>
+
+
