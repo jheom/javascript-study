@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>best</title>
+	<title>byreview</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/sub.css" />
 	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
@@ -13,14 +13,14 @@
 			<div class="headArea">
 				<h1><img src="images/common/logo.png" alt="by review"></h1>	
 				<ul class="gnb">
-					<li><a href="#"><img src="images/common/gnb01.gif" alt="리뷰"></a>
+					<li><a href="#"><img src="images/sub/gnb01-off.gif" alt="리뷰"></a>
 						<ul class="depth depth01">
 							<li><a href="#">전체</a></li>
 							<li><a href="#">디지털</a></li>
 							<li><a href="#">라이프</a></li>
 						</ul>
 					</li>
-					<li><a href="#"><img src="images/common/gnb02.gif" alt="프리뷰"></a>
+					<li><a href="#"><img src="images/sub/gnb02-off.gif" alt="프리뷰"></a>
 						<ul class="depth depth02">
 							<li><a href="#">프리뷰</a></li>
 							<li><a href="#">뷰티</a></li>
@@ -29,19 +29,19 @@
 							<li><a href="#">테마</a></li>
 						</ul>
 					</li>
-					<li><a href="#"><img src="images/common/gnb03.gif" alt="투게더"></a>
+					<li><a href="#"><img src="images/sub/gnb03-off.gif" alt="투게더"></a>
 						<ul class="depth depth03">
 							<li><a href="#">투게더</a></li>
 							<li><a href="#">빙그레</a></li>
 						</ul>
 					</li>
-					<li><a href="#"><img src="images/common/gnb04.gif" alt="젯"></a>
+					<li><a href="#"><img src="images/sub/gnb04-off.gif" alt="젯"></a>
 						<ul class="depth depth04">
 							<li><a href="#">젯</a></li>
 							<li><a href="#">라이프</a></li>
 						</ul>
 					</li>
-					<li><a href="#"><img src="images/common/gnb05.gif" alt=숍"></a>
+					<li><a href="#"><img src="images/sub/gnb05-off.gif" alt=숍"></a>
 						<ul class="depth depth05">
 							<li><a href="#">전체</a></li>
 							<li><a href="#">숍</a></li>
@@ -304,30 +304,37 @@
 	</div>
 	<script>
 	$(function(){
+		var gnbWrap = $('.gnb')  
 		var gnbList = $('.gnb > li'); 
 		var gnbDepth = $('.gnb > li > ul'); 
-		var bestView = $('.best-view-cont ul li'); 
+	 	var bestView = $('.best-view-cont ul li'); 
 		var tabList = $('.tab-writing li');
 		var popTrigger = $('.recomm a');
 		var writingList = $('.writing-cont li');
 
 		gnbList.each(function(i){  
-			gnbList.eq(i).mouseover(function(){ 
-				$(this).find('img').attr('src',$(this).find('img').attr('src').replace('.gif','_on.gif'));	
+			gnbList.eq(i).click(function(){ 
+				var imgOn = $(this).find('img').attr('src').replace('-off','-on'); 
+				
+				gnbList.each(function(){
+					var imgOff = $(this).find('img').attr('src').replace('-on','-off');
+					$(this).find('img').attr('src',imgOff);		
+				});
 
+				$(this).find('img').attr('src',imgOn);	
+								
 				gnbDepth.hide();
 				gnbDepth.eq(i).show();
 			});
 
-			gnbList.eq(i).mouseout(function(){ 
-				$(this).find('img').attr('src',$(this).find('img').attr('src').replace('_on.gif','.gif'));	
-			});
+			gnbWrap.mouseleave(function(){
+			 	gnbList.each(function(){
+					var imgOff = $(this).find('img').attr('src').replace('-on','-off');
+					$(this).find('img').attr('src',imgOff);		
+				});
 
-			gnbDepth.find('li').mouseout(function(){ 
-				 
-				$(this).parent().hide();	
+				gnbDepth.hide();	
 			});	
- 
 		});
 
 		bestView.each(function(i){ 
