@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>경마게임</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<style>
+	* {margin:0; padding:0;} 
+	ul.ol,li { list-style:none}
+	.wrap { width:700px; padding:100px; position:relative;}	
+	.wrap .racing-tit { margin-bottom:50px; text-align:center; font-size:50px; color:#222;}
+	.btns { text-align:center}
+	.btns button { display:inline-block; width:100px; height:50px; line-height:50px; margin-bottom:20px; border:0; font-size:16px; font-weight:700; color:#222; background:#eee}
+	.btns button.reset { margin-left:10px;}
+	.racecourse { height:500px; border-left:1px solid #666; border-right:1px solid #666; position:relative;}
+	.horse { width:50px; height:50px; line-height:50px; text-align:center;  position:absolute; left:-50px; font-size:14px; color:#000;}
+	.horse > a { display:block; font-size:14px; color:#000;}
+	.horse > a:hover { text-decoration:none}
+	.horse01 { top:50px; background:red}
+	.horse02 { top:200px; background:blue}
+	.horse03 { top:350px; background:yellow}
+	.pop { display:none; width:200px; height:200px; padding:40px 20px; border:1px solid #ddd; position:absolute; top:350px; left:50%; margin-left:-100px; box-sizing:border-box;}
+	.pop .list li { margin-bottom:20px; font-size:14px; color:#000;}
+	</style>
+
+	<script>
+	$(function(){
+		racing(); 
+		reset();
+		 
+	});	 
+
+		function racing(){
+			var rand01 = Math.floor(Math.random() * 10000) + 1,
+				rand02 = Math.floor(Math.random() * 10000) + 1,
+				rand03 = Math.floor(Math.random() * 10000) + 1,
+				horse01 = $('.horse01'),
+				horse02 = $('.horse02'),
+				horse03 = $('.horse03'),
+				horseNmae01 = horse01.find('a').text(),
+				horseNmae02 = horse02.find('a').text(),
+				horseNmae03 = horse03.find('a').text();
+
+			$('.start').click(function(){
+				horse01.stop().animate({
+					left:'648px'
+				},rand01,function(){
+					if(rand01 < rand02 && rand01 < rand03) {
+ 						$('.first').text(horseNmae01);//o
+					}else if(  rand02 < rand01 < rand03  ||  rand03 < rand01 < rand02) {
+ 						$('.second').text(horseNmae01); //o
+					}else if(rand01 > rand02 && rand01 > rand03) {
+ 						$('.third').text(horseNmae01);// o
+ 						$('.pop').delay(800).show();
+					}
+ 				});
+
+				horse02.stop().animate({
+					left:'648px'
+				},rand02,function(){
+					if(rand02 < rand01 && rand02 < rand03) {
+ 						$('.first').text(horseNmae02); //o
+					}else if(rand02 > rand01 && rand02 < rand03) {
+ 						$('.second').text(horseNmae02);//o
+					}else if(rand02 > rand01 && rand02 > rand03) {
+ 						$('.third').text(horseNmae02);  //o
+ 						$('.pop').delay(800).show();
+					}		 
+				});
+
+				horse03.stop().animate({
+					left:'648px'
+				},rand03,function(){
+					if(rand03 < rand01 && rand03 < rand02) {
+ 						$('.first').text(horseNmae03); //o
+					}else if(rand03 > rand01 && rand03 < rand02) {
+ 						$('.second').text(horseNmae03);
+					}else if(rand03 > rand01 && rand03 > rand02) {
+ 						$('.third').text(horseNmae03); //o
+ 						$('.pop').delay(800).show();
+					} 				 
+				});
+ 			});
+		}
+
+		 // 1등 3번, 2등 1번 , 3등 2번말  중  1번말이 안나옴
+		 // 1등 2번, 2등 3번 , 3등 1번말  중  3번말이 안나옴
+
+		function reset(){
+			$('.reset').click(function(){
+				window.location.reload(true);
+			});
+		};
+
+		/*
+		function pop(first,second,third){
+			$('.first').text(first);
+			$('.second').text(second);
+			$('.third').text(third);
+		}	
+	*/
+	</script>
+</head>
+<body>
+	<div id="wrap" class="wrap">
+		<h1 class="racing-tit">경마 게임</h1>
+		<div class="btns">
+			<button type="button" class="start">시작</button>	
+			<button type="button" class="reset">리셋</button>
+		</div>
+
+		<div class="racecourse">
+			<div class="horse horse01"><a href="#">1번 말</a></div>
+			<div class="horse horse02"><a href="#">2번 말</a></div>
+			<div class="horse horse03"><a href="#">3번 말</a></div>
+		</div>
+		
+		<div class="pop">
+			<ol class="list">
+				<li>1등 :<span class="first"></span></li>
+				<li>2등 :<span class="second"></span></li>
+				<li>3등 :<span class="third"></span> </li>
+			</ol>					
+		</div>
+	</div>
+</body>
+</html>
+<!-- 스코프 
+	 함수 안에 영향력    
+	{  스코프 }
+
+	호이스트
+	함수가 어느 위치에 있던지 최상위로 
+-->
